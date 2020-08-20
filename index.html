@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>WowBra</title>
+
+  <!-- Подключение скриптов -->
+  <script src="scripts/jQuery.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/jquery.bxslider.js"></script>
+  <script src="scripts/script.js"></script>
+  <!-- Подключение скриптов -->
+
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/ce0e6e479c.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="styles/jquery.bxslider.css" />
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  <!-- Подключение стилей -->
+
+</head>
+
+<body>
+
+  <!-- Modal -->
+<div class="modal fade" id="openModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modalTitle">
+          <h5 class="modal-title" id="exampleModalLongTitle">Оформи сейчас<br>и получи <span>скидку 53%</span></h5>
+          <h6 class="modal-title" id="exampleModalLongTitle">Товар по акции ограничен</h6>
+        </div>
+      </div>
+
+      <div class="modal-body">
+
+        <input type="text" name="" value="" class="inputName" placeholder="Введите ваше имя" required>
+        <input type="tel" name="" value="" class="inputTel" placeholder="Ваш номер телефона" required>
+
+        <div class="" id="myDropdown">
+          <span id="span1" class="dropHide" class="btn dropdown-toggle" data-toggle="dropdown"><input id="input1" class="inputSize" required readonly type="text" name="" value="" placeholder="Выберите размер"></span>
+
+          <div class="dropdown-menu">
+
+            <div class="dropdown-content">
+              <table>
+                <tr>
+                  <th>Ru</th><th>Euro</th><th>Грудь, см</th>
+                </tr>
+                <tr class="dropdown-customItem"  onclick="inputSetText1('44(S) - 88')" style="cursor:pointer;">
+                  <td>44</td><td>S</td><td>88</td>
+                </tr>
+                <tr class="dropdown-customItem"  onclick="inputSetText1('46-48(M) - 92-96')" style="cursor:pointer;">
+                  <td>46-48</td><td>M</td><td>92-96</td>
+                </tr>
+                <tr class="dropdown-customItem"  onclick="inputSetText1('50(L) - 100')" style="cursor:pointer;">
+                  <td>50</td><td>L</td><td>100</td>
+                </tr>
+                <tr class="dropdown-customItem"  onclick="inputSetText1('52-54(XL) - 104-110')" style="cursor:pointer;">
+                  <td>52-54</td><td>XL</td><td>104-110</td>
+                </tr>
+                <tr class="dropdown-customItem"  onclick="inputSetText1('56(2XL) - 116')" style="cursor:pointer;">
+                  <td>56</td><td>2XL</td><td>116</td>
+                </tr>
+                <tr class="dropdown-customItem"  onclick="inputSetText1('58(3XL) - 122')" style="cursor:pointer;">
+                  <td>58</td><td>3XL</td><td>122</td>
+                </tr>
+                <tr class="dropdown-customItem"  onclick="inputSetText1('60(4XL) - 128')" style="cursor:pointer;">
+                  <td>60</td><td>4XL</td><td>128</td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <input type="submit" name="" class="submit" value="Заказать со скидкой">
+        <label for="check1"><input type="checkbox" name="" disabled id="check1" checked readonly value="" required>Я ознакомился с условиями политики конфиденциальности и согласен с ними</label>
+        <label for="check2"><input type="checkbox" name="" disabled id="check2" checked readonly value="" required>Я выражаю согласие на получение уведомлений о статусе заказа</label>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <div class="item">
+            <img src="images/logo.png" alt="">
+            <div class="">
+              <h4>Brilliant</h4>
+              <h4>Магазин белья</h4>
+            </div>
+          </div>
+        </div>
+        <div class="none col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <div class="item">
+            <h4>24/7</h4>
+            <h4>принимаем<br>заявки</h4>
+          </div>
+        </div>
+        <div class="none col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <div class="item">
+            <h4>2145</h4>
+            <h4>счастливых<br>обладателей</h4>
+          </div>
+        </div>
+        <div class="none col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <div class="item">
+            <div class="stars">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+            <h4>4.8 |</h4>
+            <h4 style="text-decoration: underline;margin-left:5px;">35 отзывов</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="sect1">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="row" style="margin-bottom:-25px;">
+            <div class="col-12 d-flex justify-content-center">
+              <h4 class="txt1">
+                АКЦИЯ: 3 ПО ЦЕНЕ 1
+              </h4>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <h1 class="txt2">
+                Наборы бесшовных топов WowBra
+              </h1>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <h6 class="txt3">
+                Для женщин любой комплекции <b>(S-4XL)</b>
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+          <div class="item-img">
+            <img src="images/img1.png" alt="">
+            <img src="images/img1_m.png" alt="">
+          </div>
+          <div class="item">
+            <div class="item-txt1">
+              Акция
+            </div>
+            <div class="item-border">
+              <div class="item-txt2">
+                Базовый
+              </div>
+              <table class="item-tablePrice">
+                <tr>
+                  <th>Обычная цена:</th>
+                  <th>Цена за 3 шт.</th>
+                </tr>
+                <tr>
+                  <td>2815₽</td>
+                  <td>1290₽</td>
+                </tr>
+              </table>
+              <ul class="item-list" type="circle" style="background-color: #f7f5ec;">
+                <li>Очень удобный, не натирает, не давит, не ограничивает движения</li>
+                <li>Поддерживает грудь, делая её привлекательнее</li>
+                <li>Никаких косточек, трущих бретель или поролона</li>
+              </ul>
+              <div class="item-txt3">
+                Остаток наборов по акции: <b>7 шт</b> <i class="fa fa-signal fa-flip-horizontal" style="color:#00dc00"></i>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button type="button" name="button" class="item-btn1" data-toggle="modal" data-target="#openModal">ЗАКАЗАТЬ ПО АКЦИИ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+          <div class="item-img ">
+            <img src="images/img2.png" alt="">
+            <img src="images/img2_m.png" alt="">
+          </div>
+          <div class="item">
+            <div class="item-txt1">
+              Акция
+            </div>
+            <div class="item-border">
+              <div class="item-txt2">
+                Push-up
+              </div>
+              <table class="item-tablePrice">
+                <tr>
+                  <th>Обычная цена:</th>
+                  <th>Цена за 3 шт.</th>
+                </tr>
+                <tr>
+                  <td>2815₽</td>
+                  <td>1690₽</td>
+                </tr>
+              </table>
+              <ul class="item-list" type="circle" style="background-color:#fff3ef;">
+                <li>Очень удобный, не натирает, не давит, не ограничивает движения</li>
+                <li>Поддерживает грудь, делая её привлекательнее</li>
+                <li>Двухслойный топ без косточек с пуш-ап эффектом</li>
+              </ul>
+              <div class="item-txt3">
+                Остаток наборов по акции: <b>6 шт</b> <i class="fa fa-signal fa-flip-horizontal" style="color:#00dc00"></i>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button type="button" name="button" class="item-btn1" data-toggle="modal" data-target="#openModal">ЗАКАЗАТЬ ПО АКЦИИ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+          <div class="item-img ">
+            <img src="images/img3.png" alt="">
+            <img src="images/img3_m.png" alt="">
+          </div>
+          <div class="item">
+            <div class="item-txt1">
+              Акция
+            </div>
+            <div class="item-border">
+              <div class="item-txt2">
+                Ажур
+              </div>
+              <table class="item-tablePrice">
+                <tr>
+                  <th>Обычная цена:</th>
+                  <th >Цена за 3 шт.</th>
+                </tr>
+                <tr>
+                  <td>2815₽</td>
+                  <td>1990₽</td>
+                </tr>
+              </table>
+              <ul class="item-list" type="circle" style="background-color:#fcf9e6;">
+                <li>Очень удобный, не натирает, не давит, не ограничивает движения</li>
+                <li>Идеальная поддержка спины и груди</li>
+                <li>Топ с нежным кружевом без косточек с пуш-ап</li>
+              </ul>
+              <div class="item-txt3">
+                Остаток наборов по акции: <b>7 шт</b> <i class="fa fa-signal fa-flip-horizontal" style="color:#00dc00"></i>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button type="button" name="button" class="item-btn1" data-toggle="modal" data-target="#openModal">ЗАКАЗАТЬ ПО АКЦИИ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="sect2">
+    <div class="container">
+      <div class="row">
+        <div class="txt1 col-12">
+          <h2>Наши топы <b>кардинально отличаются<br></b>от обычных бюстгалтеров</h2>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <div class="item">
+            <div class="img">
+              <img src="images/img4_1.png" alt="">
+            </div>
+            <div class="list">
+              <h4><b>Обычный бюстгалтер</b></h4>
+              <ul>
+                <li>Вес груди горбит спину</li>
+                <li>Вес груди сворачивает плечи вперёд</li>
+              </ul>
+              <h4><b>Это приводит к:</b></h4>
+              <ul>
+                <li>Неправильная осанка</li>
+                <li>Головная боль и боли в спине</li>
+                <li>Образование вторго подбородка</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <div class="item">
+            <div class="img">
+              <img src="images/img4_2.png" alt="">
+            </div>
+            <div class="list">
+              <h4><b>Бюстгалтер "WowBra" и "АжурБра"</b></h4>
+              <ul>
+                <li>Вес груди выпрямляет спину</li>
+                <li>Вес груди отводит плечи назад</li>
+              </ul>
+              <h4><b>Помогает:</b></h4>
+              <ul>
+                <li>Исправить осанку</li>
+                <li>Устранить головные боли и боли в спине</li>
+                <li>Устранить причину появления второго подборотка</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <div class="item">
+            <img src="images/img5_m.png" alt="">
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <div class="item">
+            <div class="list">
+              <h4><b>В чём уникальность конструкции</b></h4>
+              <p>Запатентованная революционная конструкция
+                сочетает в себе медицинские и эстетические преимущества, отводит назад плечи, используя
+                вес груди</p>
+              <h4><b>Эффект:</b></h4>
+              <ul>
+                <li>профилактика искревления позвоночника</li>
+                <li>предотвращает развитие сутулости</li>
+                <li>препятствует болм в спине</li>
+                <li>профилактика остеохондроза</li>
+                <li>не сковывает движения</li>
+                <li>микромассажный эффект</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect3_2">
+    <div class="container">
+      <div class="row">
+        <div class="txt1 col-12">
+          <h2>"Wowbra" и "АжурБра" - ровная осанка<br>и <b>максимальный комфорт</b></h2>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <div class="item">
+            <img src="images/img6_1.png" alt="">
+            <h4>Расправляет плечи назад</h4>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <div class="item">
+            <img src="images/img6_2.png" alt="">
+            <h4>Отличная поддержка и лифтинг груди</h4>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <div class="item">
+            <img src="images/img6_3.png" alt="">
+            <h4>Отличный push-up эффект</h4>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <div class="item">
+            <img src="images/img6_4.png" alt="">
+            <h4>Комфортный и дышащий материал</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect4">
+    <div class="container">
+      <div class="row">
+        <div class="txt1 col-12">
+          <h2>С топами <b>вы забудете<br>о проблемах</b></h2>
+        </div>
+        <div class="item col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <img src="images/img7_1.png" alt="" class="img">
+          <div class="flexList">
+            <img src="images/img8_1.png" alt="">
+            <p><b>Топ полностью бесшовный</b><br>идеально облегает спину</p>
+          </div>
+          <div class="flexList">
+            <img src="images/img8_2.png" alt="">
+            <p><b>Удобные лямки сидят аккуратно</b><br>не давят и не перетягивают</p>
+          </div>
+          <div class="flexList">
+            <img src="images/img8_3.png" alt="">
+            <p><b>Нет застёжек</b><br>очень комфортный</p>
+          </div>
+        </div>
+        <div class="item col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <img src="images/img7_2.png" alt="" class="img">
+          <div class="flexList">
+            <img src="images/img8_4.png" alt="">
+            <p><b>Топ полностью бесшовный</b><br>идеально облегает спину</p>
+          </div>
+          <div class="flexList">
+            <img src="images/img8_5.png" alt="">
+            <p><b>Удобные лямки сидят аккуратно</b><br>не давят и не перетягивают</p>
+          </div>
+          <div class="flexList">
+            <img src="images/img8_6.png" alt="">
+            <p><b>Нет застёжек</b><br>очень комфортный</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect5">
+    <div class="container">
+      <div class="row">
+        <div class="txt1 col-12">
+          <h2><b>Комфорт, поддрежка</b><br>и безупречный стиль!</h2>
+        </div>
+        <div class="left col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 order-1 order-sm-1 order-md-1 order-lg-1 order-xl-1">
+          <div class="flexItem row">
+            <img src="images/img9_3.png" alt="">
+            <p><b>Мягкие вставки Пуш-ап</b><br>обеспечат комфортное
+              <br>ношение</p>
+          </div>
+          <div class="flexItem row">
+            <img src="images/img9_2.png" alt="">
+            <p><b>Тонкий и дышащий</b><br>материал</p>
+          </div>
+          <div class="flexItem row">
+            <img src="images/img9_1.png" alt="">
+            <p><b>Эффективно<br>поддерживает</b><br>и спину и грудь</p>
+          </div>
+        </div>
+        <div class="item col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 order-3 order-sm-3 order-md-3 order-lg-2 order-xl-2">
+          <div class="img">
+            <img src="images/img9.png" alt="">
+          </div>
+        </div>
+        <div class="right col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 order-2 order-sm-2 order-md-2 order-lg-3 order-xl-3">
+          <div class="flexItem row">
+            <p class="order-2 order-sm-2 order-md-2 order-lg-1 order-xl-1"><b>Сочетается с любым</b><br>видом одежды</p>
+            <img src="images/img9_4.png" alt="" class="order-1 order-sm-1 order-md-1 order-lg-2 order-xl-2">
+          </div>
+          <div class="flexItem row">
+            <p class="order-2 order-sm-2 order-md-2 order-lg-1 order-xl-1"><b>Комфорт и удобство</b><br>днём и ночью</p>
+            <img src="images/img9_5.png" alt="" class="order-1 order-sm-1 order-md-1 order-lg-2 order-xl-2">
+          </div>
+          <div class="flexItem row">
+            <p class="order-2 order-sm-2 order-md-2 order-lg-1 order-xl-1"><b>Не заметен</b><br>под одеждой</p>
+            <img src="images/img9_6.png" alt="" class="order-1 order-sm-1 order-md-1 order-lg-2 order-xl-2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect6">
+    <div class="container">
+      <div class="row">
+        <div class="colContainer col-12">
+          <div class="col1">
+            <img src="images/img10.png" alt="">
+          </div>
+          <div class="col2">
+            <h3>Ольга Смирнова</h3>
+            <h4>Модель plus-size</h4>
+            <div class="">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+            <p>«У меня 5 размер груди, и я горжусь, чем меня наградила природа. Но с такой большой грудью очень много проблем. Бретельки так сильно впиваются в кожу, что потом остаются следы. Застежка давит постоянно, да и тяжеловато носить такое достоинство.
+              По совету подруги с похожей проблемой попробовала утягивающий бесшовный топ.<br><br>Он такой незаметный, как вторая кожа, надежно поддерживает грудь и спину, но при этом совершенно не передавливает. Это очень важное качество:
+              ведь для съемок надо выглядеть идеально. В комплекте идет три цвета, и это очень практично: подойдет для любого образа, придуманного дизайнером»</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect7">
+    <div class="container">
+      <div class="row">
+        <div class="txt1 col-12">
+          <h2>Характеристики и комплектация</h2>
+        </div>
+        <div class="item col-12">
+          <div class="video">
+            <video src="images/1.mp4" controls="controls">
+              Элемент video не поддерживается вашим браузером.
+            </video>
+          </div>
+          <div class="video-about">
+            <h4><b>Материал "WowBra":</b> 4% лайкра, 96% нейлон<br>
+            <b>Материал "АжурБра":</b> 90-92% нейлон,<br>8-10% спандекс<br>
+            <b>Материал вкладки:</b> дышащий экопоролон</h4>
+            <h4><b>В любом комплекте 3 топа</b> разных цветов одного размера</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect8">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="txt1 col-12">
+          <h2>Галерея</h2>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <img src="images/img12_1.png" alt="">
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <img src="images/img12_2.png" alt="">
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <img src="images/img12_3.png" alt="">
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <img src="images/img12_4.png" alt="">
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <img src="images/img12_5.png" alt="">
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <img src="images/img12_6.png" alt="">
+        </div>
+        <div class="tableSize col-10">
+          <table>
+            <tr>
+              <td>Российский размер</td>
+              <td class="custom-td">44</td>
+              <td class="custom-td">46</td>
+              <td class="custom-td">48</td>
+              <td class="custom-td">50</td>
+              <td class="custom-td">52</td>
+              <td class="custom-td">54</td>
+              <td class="custom-td">56</td>
+              <td class="custom-td">58</td>
+              <td class="custom-td">60</td>
+            </tr>
+            <tr>
+              <td>Международный размер</td>
+              <td class="custom-td">S</td>
+              <td class="custom-td" colspan="2">M</td>
+              <td class="custom-td">L</td>
+              <td class="custom-td" colspan="2">XL</td>
+              <td class="custom-td">2XL</td>
+              <td class="custom-td">3XL</td>
+              <td class="custom-td">4XL</td>
+            </tr>
+            <tr>
+              <td>Обхват груди</td>
+              <td class="custom-td">88</td>
+              <td class="custom-td">92</td>
+              <td class="custom-td">96</td>
+              <td class="custom-td">100</td>
+              <td class="custom-td">104</td>
+              <td class="custom-td">110</td>
+              <td class="custom-td">116</td>
+              <td class="custom-td">122</td>
+              <td class="custom-td">128</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>Ru</td>
+              <td>Euro</td>
+              <td>Грудь, см</td>
+            </tr>
+            <tr>
+              <td class="custom-td">44</td>
+              <td class="custom-td">S</td>
+              <td class="custom-td">88</td>
+            </tr>
+            <tr>
+              <td class="custom-td">46</td>
+              <td class="custom-td" rowspan="2">M</td>
+              <td class="custom-td">92</td>
+            </tr>
+            <tr>
+              <td class="custom-td">48</td>
+              <td class="custom-td">96</td>
+            </tr>
+            <tr>
+              <td class="custom-td">50</td>
+              <td class="custom-td">L</td>
+              <td class="custom-td">100</td>
+            </tr>
+            <tr>
+              <td class="custom-td">104</td>
+              <td class="custom-td" rowspan="2">XL</td>
+              <td class="custom-td">104</td>
+            </tr>
+            <tr>
+              <td class="custom-td">54</td>
+              <td class="custom-td">110</td>
+            </tr>
+            <tr>
+              <td class="custom-td">56</td>
+              <td class="custom-td">2XL</td>
+              <td class="custom-td">116</td>
+            </tr>
+            <tr>
+              <td class="custom-td">58</td>
+              <td class="custom-td">3XL</td>
+              <td class="custom-td">122</td>
+            </tr>
+            <tr>
+              <td class="custom-td">60</td>
+              <td class="custom-td">4XL</td>
+              <td class="custom-td">128</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect9">
+    <div class="container">
+      <div class="txt1 col-12">
+        <h2>Отзывы из соц сетей</h2>
+      </div>
+      <div class="bxslider">
+        <div class="item">
+          <div class="item-content">
+            <div class="people">
+              <div class="avatar">
+                <img src="images/img13_1_1.png" alt="">
+              </div>
+              <div class="fio">
+                <h6>Мария Карпенко</h6>
+                <h6>1 окт 10:41</h6>
+              </div>
+            </div>
+            <p class="text">Доставка быстрая, отслеживалась до самой почты, топы подошли на размер груди 3 и объем 102, не жмут,не давят,
+              не просвечают,грудь держат хорошо, спасибо, рекомендую , буду заказывать еще в этом магазине.</p>
+            <div class="photo">
+              <img src="images/img13_1_2.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <div class="people">
+              <div class="avatar">
+                <img src="images/img13_2_1.png" alt="">
+              </div>
+              <div class="fio">
+                <h6>Оля Иванова</h6>
+                <h6>5 дек 13:43</h6>
+              </div>
+            </div>
+            <p class="text">В магазинах же всё только для худышек. А где найти для нас полненьких? Заказала этот набор. Пришло действительно три топа.
+            Кружево нежное, материал хоть и тонкий, но прочный и хорошо тянется. Как утром надела, так и весь день проходила. Слов нет, как хорошо! Девочик, у кого такие же проблемы,
+          берите, не пожалеете!</p>
+            <div class="photo">
+              <img src="images/img13_2_2.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <div class="people">
+              <div class="avatar">
+                <img src="images/img13_3_1.png" alt="">
+              </div>
+              <div class="fio">
+                <h6>Анастасия Венгер</h6>
+                <h6>1 дек 14:01</h6>
+              </div>
+            </div>
+            <p class="text">Поверьте, с маленькой грудью тоже есть свои минусы! Покупала раньше белый пуш ап. Неосить его невозможно - не вдохнуть, не выдохнуть. В ажур бра есть
+            специальные вставки, они как раз и приподнимают грудь. Если надо, я могу убрать их. Тогда получается обычный топ, который можно надеть под всё что угодно.</p>
+            <div class="photo">
+              <img src="images/img13_3_2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect10">
+    <div class="container">
+      <div class="row">
+        <div class="txt1 col-12">
+          <h2>О компании</h2>
+        </div>
+        <div class="itemFlex col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="img">
+            <img src="images/img14_1.png" alt="">
+            <img src="images/img14_1_m.png" alt="">
+          </div>
+          <div class="cart">
+            <div class="span">
+              «
+            </div>
+            <div class="content">
+              <p class="text">На протяжении 7 лет существования нашей компании,
+                мы делаем всё, чтобы радовать покупателей товарами
+                высокого качества по доступным ценам. Надеюсь,
+                вы останетесь довольны</p>
+              <h4><b>Анна Громова, основатель компании</b></h4>
+              <img src="images/img14_2.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="item col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+          <div class="icon">
+            <img src="images/img14_3.png" alt="">
+          </div>
+          <h4>Доставка</h4>
+          <p>Доставляем по всей стране курьерской службой и почтой России</p>
+        </div>
+        <div class="item col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+          <div class="icon">
+            <img src="images/img14_4.png" alt="">
+          </div>
+          <h4>Гарантия качества</h4>
+          <p>Мы работаем напрямую
+            с заводом-изготовителем
+            и гарантируем качество
+            продукции</p>
+        </div>
+        <div class="item col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+          <div class="icon">
+            <img src="images/img14_5.png" alt="">
+          </div>
+          <h4>Оплата по факту</h4>
+          <p>Оплата осуществляется
+            при получении товара</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect11">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="row" style="margin-bottom:-25px;">
+            <div class="col-12 d-flex justify-content-center">
+              <h4 class="txt1">
+                АКЦИЯ: 3 ПО ЦЕНЕ 1
+              </h4>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <h1 class="txt2">
+                Наборы бесшовных топов WowBra
+              </h1>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <h6 class="txt3">
+                Для женщин любой комплекции <b>(S-4XL)</b>
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+          <div class="item-img ">
+            <img src="images/img1.png" alt="">
+            <img src="images/img1_m.png" alt="">
+          </div>
+          <div class="item">
+            <div class="item-txt1">
+              Акция
+            </div>
+            <div class="item-border">
+              <div class="item-txt2">
+                Базовый
+              </div>
+              <table class="item-tablePrice">
+                <tr>
+                  <th>Обычная цена:</th>
+                  <th>Цена за 3 шт.</th>
+                </tr>
+                <tr>
+                  <td>2815₽</td>
+                  <td>1290₽</td>
+                </tr>
+              </table>
+              <ul class="item-list" type="circle" style="background-color: #f7f5ec;">
+                <li>Очень удобный, не натирает, не давит, не ограничивает движения</li>
+                <li>Поддерживает грудь, делая её привлекательнее</li>
+                <li>Никаких косточек, трущих бретель или поролона</li>
+              </ul>
+              <div class="item-txt3">
+                Остаток наборов по акции: <b>7 шт</b> <i class="fa fa-signal fa-flip-horizontal" style="color:#00dc00"></i>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button type="button" name="button" class="item-btn1" data-toggle="modal" data-target="#openModal">ЗАКАЗАТЬ ПО АКЦИИ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+          <div class="item-img ">
+            <img src="images/img2.png" alt="">
+            <img src="images/img2_m.png" alt="">
+          </div>
+          <div class="item">
+            <div class="item-txt1">
+              Акция
+            </div>
+            <div class="item-border">
+              <div class="item-txt2">
+                Push-up
+              </div>
+              <table class="item-tablePrice">
+                <tr>
+                  <th>Обычная цена:</th>
+                  <th>Цена за 3 шт.</th>
+                </tr>
+                <tr>
+                  <td>2815₽</td>
+                  <td>1690₽</td>
+                </tr>
+              </table>
+              <ul class="item-list" type="circle" style="background-color:#fff3ef;">
+                <li>Очень удобный, не натирает, не давит, не ограничивает движения</li>
+                <li>Поддерживает грудь, делая её привлекательнее</li>
+                <li>Двухслойный топ без косточек с пуш-ап эффектом</li>
+              </ul>
+              <div class="item-txt3">
+                Остаток наборов по акции: <b>6 шт</b> <i class="fa fa-signal fa-flip-horizontal" style="color:#00dc00"></i>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button type="button" name="button" class="item-btn1" data-toggle="modal" data-target="#openModal">ЗАКАЗАТЬ ПО АКЦИИ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+          <div class="item-img ">
+            <img src="images/img3.png" alt="">
+            <img src="images/img3_m.png" alt="">
+          </div>
+          <div class="item">
+            <div class="item-txt1">
+              Акция
+            </div>
+            <div class="item-border">
+              <div class="item-txt2">
+                Ажур
+              </div>
+              <table class="item-tablePrice">
+                <tr>
+                  <th>Обычная цена:</th>
+                  <th >Цена за 3 шт.</th>
+                </tr>
+                <tr>
+                  <td>2815₽</td>
+                  <td>1990₽</td>
+                </tr>
+              </table>
+              <ul class="item-list" type="circle" style="background-color:#fcf9e6;">
+                <li>Очень удобный, не натирает, не давит, не ограничивает движения</li>
+                <li>Идеальная поддержка спины и груди</li>
+                <li>Топ с нежным кружевом без косточек с пуш-ап</li>
+              </ul>
+              <div class="item-txt3">
+                Остаток наборов по акции: <b>7 шт</b> <i class="fa fa-signal fa-flip-horizontal" style="color:#00dc00"></i>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button type="button" name="button" class="item-btn1" data-toggle="modal" data-target="#openModal">ЗАКАЗАТЬ ПО АКЦИИ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
